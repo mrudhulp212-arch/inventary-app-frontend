@@ -251,7 +251,7 @@ function Home() {
           </table>
         </div>
 
-        {/* Mobile Card View */}
+        {/* Mobile CardViewzz */}
         <div className="sm:hidden flex flex-col gap-4">
           {productstore.length > 0 ? (
             productstore.map((pro, index) => (

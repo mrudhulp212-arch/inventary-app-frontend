@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useAuth } from "../context/AuthProvider"; // Import your auth context
+import { useAuth } from "../context/AuthProvider";
 
 function Navbar() {
   const [isShow, setIsShow] = useState(false);
-  const { user, logout } = useAuth(); // Get user info and logout function
+  const { user, logout } = useAuth();
 
   return (
     <nav className="sticky z-50 top-0 h-16 bg-linear-to-br from-[#07023A] via-[#120A5C] to-[#2A1FA3] flex items-center justify-between px-6">
@@ -43,7 +43,7 @@ function Navbar() {
       >
 
 
-        {/* Mobile: Show logged-in user name */}
+        {/* Mobile: Show logged-in usernamaa */}
         {user && (
           <li className="text-green-400 font-semibold mt-2 px-2">
             Hello, {user.name}

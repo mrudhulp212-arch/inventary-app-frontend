@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthProvider";
 
 function Login() {
   const { login } = useAuth();
-  const navigate = useNavigate(); // for redirect after login
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -36,11 +36,11 @@ function Login() {
       console.log("Logged in user & token:", data);
       login(data.registered);
       // Redirect to Home page
-      navigate("/"); // change "/home" to your Home route
+      navigate("/");
     } catch (error) {
       console.error(error);
 
-      // Display backend error message if exists
+      // Displya error message if exists
       if (error.response && error.response.data) {
         setMessage(error.response.data || "Login failed");
       } else {

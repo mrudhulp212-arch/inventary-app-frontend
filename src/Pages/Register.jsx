@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
-  const navigate = useNavigate(); // for redirect
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,7 +11,7 @@ function Register() {
     confirmPassword: "",
   });
 
-  const [message, setMessage] = useState(""); // success/error messages
+  const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -39,7 +39,6 @@ function Register() {
       setMessage("Registration successful!");
       console.log("User & Token:", data);
 
-      // Redirect to login page after 1 second
       setTimeout(() => {
         navigate("/login");
       }, 1000);
@@ -130,7 +129,10 @@ function Register() {
         </form>
 
         <p className="text-center text-gray-500 mt-4">
-          Already have an account? <a href="/login" className="text-blue-600">Login</a>
+          Already have an account?{" "}
+          <a href="/login" className="text-blue-600">
+            Login
+          </a>
         </p>
       </div>
     </div>
