@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="sticky z-50 top-0 h-16 bg-linear-to-br from-[#07023A] via-[#120A5C] to-[#2A1FA3] flex items-center justify-between px-6">
       <div className="text-yellow-400 font-bold text-xl md:text-2xl">
-        Enventory Management
+        Inventory Management
       </div>
 
       <ul className="hidden flex md:flex gap-10 list-none items-center">
